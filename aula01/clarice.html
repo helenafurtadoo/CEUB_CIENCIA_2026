@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bella Beauty — Salão de beleza premium. Cortes, coloração, manicure e maquiagem com profissionais experientes e atendimento exclusivo.">
+  <title>Bella Beauty | Salão de Beleza Premium</title>
+
+  <!-- Fontes: Playfair Display (títulos) + Poppins (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header__container">
+      <a href="#inicio" class="logo">Bella <span>Beauty</span></a>
+
+      <!-- Menu mobile (checkbox hack — 100% CSS, sem JS) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a href="#contato" class="btn btn--nav">Agendar</a>
+      </nav>
+
+      <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="inicio" class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="eyebrow reveal">Salão de beleza premium</p>
+      <h1 class="reveal reveal--delay-1">Realçando sua beleza<br>com cuidado e elegância.</h1>
+      <p class="hero__subtitle reveal reveal--delay-2">
+        Uma experiência exclusiva de beleza e bem-estar, com profissionais
+        especializados e ambiente sofisticado pensado para você.
+      </p>
+      <div class="hero__actions reveal reveal--delay-3">
+        <a href="#contato" class="btn btn--primary">Agendar Horário</a>
+        <a href="#servicos" class="btn btn--ghost">Ver Serviços</a>
+      </div>
+    </div>
+    <a href="#servicos" class="hero__scroll" aria-label="Rolar para baixo">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== BARRA DE CONFIANÇA ===== -->
+  <section class="stats">
+    <div class="stats__grid">
+      <div class="stats__item reveal">
+        <span class="stats__number">12+</span>
+        <span class="stats__label">Anos de experiência</span>
+      </div>
+      <div class="stats__item reveal reveal--delay-1">
+        <span class="stats__number">8</span>
+        <span class="stats__label">Profissionais especializados</span>
+      </div>
+      <div class="stats__item reveal reveal--delay-2">
+        <span class="stats__number">5.000+</span>
+        <span class="stats__label">Clientes satisfeitas</span>
+      </div>
+      <div class="stats__item reveal reveal--delay-3">
+        <span class="stats__number">4.9</span>
+        <span class="stats__label">Avaliação média ★</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section id="servicos" class="services">
+    <div class="section__header reveal">
+      <p class="eyebrow">O que oferecemos</p>
+      <h2>Serviços em Destaque</h2>
+      <p class="section__subtitle">Cuidados especiais para realçar a sua beleza natural, com técnica e requinte.</p>
+    </div>
+
+    <div class="services__grid">
+      <article class="service-card reveal">
+        <div class="service-card__image">
+          <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=600&q=80" alt="Corte de cabelo feminino elegante" loading="lazy">
+        </div>
+        <div class="service-card__body">
+          <h3>Corte Feminino</h3>
+          <p>Cortes modernos e personalizados, alinhados ao seu estilo e formato de rosto.</p>
+          <div class="service-card__footer">
+            <span class="service-card__price">R$ 120</span>
+            <a href="#contato" class="service-card__link">Agendar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card reveal reveal--delay-1">
+        <div class="service-card__image">
+          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=600&q=80" alt="Escova modeladora profissional" loading="lazy">
+        </div>
+        <div class="service-card__body">
+          <h3>Escova &amp; Finalização</h3>
+          <p>Escova modeladora com produtos premium para brilho e movimento duradouros.</p>
+          <div class="service-card__footer">
+            <span class="service-card__price">R$ 90</span>
+            <a href="#contato" class="service-card__link">Agendar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card reveal reveal--delay-2">
+        <div class="service-card__image">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80" alt="Manicure com acabamento impecável" loading="lazy">
+        </div>
+        <div class="service-card__body">
+          <h3>Manicure &amp; Pedicure</h3>
+          <p>Cuidado completo para suas unhas, com esmaltação de longa duração.</p>
+          <div class="service-card__footer">
+            <span class="service-card__price">R$ 65</span>
+            <a href="#contato" class="service-card__link">Agendar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card reveal reveal--delay-3">
+        <div class="service-card__image">
+          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Maquiagem profissional para eventos" loading="lazy">
+        </div>
+        <div class="service-card__body">
+          <h3>Maquiagem</h3>
+          <p>Maquiagem profissional para eventos especiais, noivas e produções.</p>
+          <div class="service-card__footer">
+            <span class="service-card__price">R$ 180</span>
+            <a href="#contato" class="service-card__link">Agendar →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== DIFERENCIAIS ===== -->
+  <section id="diferenciais" class="differentials">
+    <div class="section__header reveal">
+      <p class="eyebrow">Por que nos escolher</p>
+      <h2>Nossos Diferenciais</h2>
+    </div>
+
+    <div class="differentials__grid">
+      <div class="differential reveal">
+        <span class="differential__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <circle cx="12" cy="8" r="5"></circle>
+            <path d="M8.5 13 6 22l6-3 6 3-2.5-9"></path>
+          </svg>
+        </span>
+        <h3>Profissionais Premiados</h3>
+        <p>Equipe reconhecida nacionalmente, sempre atualizada com as últimas tendências.</p>
+      </div>
+
+      <div class="differential reveal reveal--delay-1">
+        <span class="differential__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M20.8 8.6c0 5-8.8 9.8-8.8 9.8S3.2 13.6 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"></path>
+          </svg>
+        </span>
+        <h3>Atendimento Personalizado</h3>
+        <p>Cada cliente é única — planejamos o cuidado ideal para o seu perfil e desejo.</p>
+      </div>
+
+      <div class="differential reveal reveal--delay-2">
+        <span class="differential__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path>
+            <circle cx="12" cy="12" r="3.2"></circle>
+          </svg>
+        </span>
+        <h3>Produtos Premium</h3>
+        <p>Linhas profissionais selecionadas, seguras e de altíssima qualidade.</p>
+      </div>
+
+      <div class="differential reveal reveal--delay-3">
+        <span class="differential__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="3.5" y="6" width="17" height="13" rx="2"></rect>
+            <path d="M8 3.5v5M16 3.5v5M3.5 10.5h17"></path>
+          </svg>
+        </span>
+        <h3>Ambiente Exclusivo</h3>
+        <p>Espaço acolhedor e sofisticado, pensado para o seu relaxamento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre" class="about">
+    <div class="about__container">
+      <div class="about__image reveal">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Interior sofisticado do salão Bella Beauty">
+        <div class="about__badge">
+          <strong>12+</strong>
+          <span>anos de<br>excelência</span>
+        </div>
+      </div>
+      <div class="about__text reveal reveal--delay-1">
+        <p class="eyebrow">Nossa história</p>
+        <h2>Sobre o Bella Beauty</h2>
+        <p>
+          Há mais de uma década, o <strong>Bella Beauty</strong> é sinônimo de sofisticação
+          e cuidado. Nossa equipe reúne profissionais experientes, em constante
+          atualização com as tendências internacionais de beleza.
+        </p>
+        <p>
+          Unimos técnica, produtos premium e um ambiente acolhedor para oferecer
+          uma experiência verdadeiramente exclusiva — porque acreditamos que
+          beleza e bem-estar caminham juntos.
+        </p>
+        <a href="#contato" class="btn btn--outline">Conhecer o Salão</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIA ===== -->
+  <section id="galeria" class="gallery">
+    <div class="section__header reveal">
+      <p class="eyebrow">Portfólio</p>
+      <h2>Galeria</h2>
+      <p class="section__subtitle">Alguns dos nossos trabalhos mais recentes</p>
+    </div>
+
+    <div class="gallery__grid">
+      <div class="gallery__item reveal">
+        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=600&q=80" alt="Corte de cabelo feminino" loading="lazy">
+        <div class="gallery__overlay"><span>Cortes</span></div>
+      </div>
+      <div class="gallery__item reveal reveal--delay-1">
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Maquiagem profissional" loading="lazy">
+        <div class="gallery__overlay"><span>Maquiagem</span></div>
+      </div>
+      <div class="gallery__item reveal reveal--delay-2">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80" alt="Manicure e unhas decoradas" loading="lazy">
+        <div class="gallery__overlay"><span>Unhas</span></div>
+      </div>
+      <div class="gallery__item reveal">
+        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=600&q=80" alt="Penteado elegante" loading="lazy">
+        <div class="gallery__overlay"><span>Penteados</span></div>
+      </div>
+      <div class="gallery__item reveal reveal--delay-1">
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=600&q=80" alt="Salão de beleza moderno" loading="lazy">
+        <div class="gallery__overlay"><span>Ambiente</span></div>
+      </div>
+      <div class="gallery__item reveal reveal--delay-2">
+        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=600&q=80" alt="Cuidados com o cabelo" loading="lazy">
+        <div class="gallery__overlay"><span>Tratamentos</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section id="depoimentos" class="testimonials">
+    <div class="section__header reveal">
+      <p class="eyebrow">Depoimentos</p>
+      <h2>O que dizem sobre nós</h2>
+    </div>
+
+    <div class="testimonials__grid">
+      <blockquote class="testimonial reveal">
+        <div class="testimonial__stars">★★★★★</div>
+        <p>“Atendimento impecável do início ao fim. Me senti extremamente bem cuidada e o resultado superou minhas expectativas.”</p>
+        <footer>
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Foto de Camila R.">
+          <div>
+            <cite>Camila R.</cite>
+            <span>Cliente há 3 anos</span>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="testimonial reveal reveal--delay-1">
+        <div class="testimonial__stars">★★★★★</div>
+        <p>“Ambiente sofisticado, profissionais atenciosos e produtos de altíssima qualidade. Simplesmente o melhor salão da cidade.”</p>
+        <footer>
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Foto de Fernanda M.">
+          <div>
+            <cite>Fernanda M.</cite>
+            <span>Cliente há 1 ano</span>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="testimonial reveal reveal--delay-2">
+        <div class="testimonial__stars">★★★★★</div>
+        <p>“Fiz minha maquiagem de noiva no Bella Beauty e foi perfeito. Cuidado, escuta e um resultado lindo — recomendo de olhos fechados.”</p>
+        <footer>
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Foto de Juliana P.">
+          <div>
+            <cite>Juliana P.</cite>
+            <span>Noiva 2025</span>
+          </div>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato" class="contact">
+    <div class="contact__container">
+      <div class="contact__info reveal">
+        <p class="eyebrow">Fale conosco</p>
+        <h2>Vamos agendar o seu horário?</h2>
+        <p class="section__subtitle contact__intro">
+          Estamos prontos para te receber. Entre em contato pelo canal de sua preferência.
+        </p>
+
+        <ul class="contact__list">
+          <li>
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.4"></circle></svg>
+            </span>
+            <div>
+              <strong>Endereço</strong>
+              <p>Rua das Flores, 123 — Jardins, São Paulo/SP</p>
+            </div>
+          </li>
+          <li>
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-6-3-2 2c-2.5-1.2-4.8-3.5-6-6l2-2-3-6-4 0Z"></path></svg>
+            </span>
+            <div>
+              <strong>Telefone</strong>
+              <p>(11) 3456-7890</p>
+            </div>
+          </li>
+          <li>
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20.8 8.6c0 5-8.8 9.8-8.8 9.8S3.2 13.6 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"></path></svg>
+            </span>
+            <div>
+              <strong>WhatsApp</strong>
+              <p>(11) 91234-5678</p>
+            </div>
+          </li>
+          <li>
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"></rect><circle cx="12" cy="12" r="3.6"></circle><circle cx="17" cy="7" r=".6" fill="currentColor"></circle></svg>
+            </span>
+            <div>
+              <strong>Instagram</strong>
+              <p>@bellabeauty.salao</p>
+            </div>
+          </li>
+          <li>
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.2 2"></path></svg>
+            </span>
+            <div>
+              <strong>Horário</strong>
+              <p>Seg a Sáb: 9h às 19h · Domingo: Fechado</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact__card reveal reveal--delay-1">
+        <h3>Agende sua visita</h3>
+        <p>Garanta seu horário com nossos especialistas e viva a experiência Bella Beauty.</p>
+        <a href="tel:+551134567890" class="btn btn--primary btn--block">Agendar por Telefone</a>
+        <a href="#" class="btn btn--whatsapp btn--block">Agendar pelo WhatsApp</a>
+        <div class="contact__card-divider"></div>
+        <p class="contact__note">Resposta em até 30 minutos durante o horário de funcionamento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <a href="#inicio" class="logo">Bella <span>Beauty</span></a>
+        <p>Realçando sua beleza com cuidado, técnica e elegância desde 2014.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Navegação</h4>
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <a href="tel:+551134567890">(11) 3456-7890</a>
+        <a href="#">Rua das Flores, 123 — SP</a>
+        <a href="#">contato@bellabeauty.com</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Redes Sociais</h4>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.4A4 4 0 1 1 12.6 8 4 4 0 0 1 16 11.4Z"></path><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"></circle></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"></path></svg>
+          </a>
+          <a href="#" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.8 8.6c0 5-8.8 9.8-8.8 9.8S3.2 13.6 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2026 Bella Beauty. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="#" class="whatsapp-float" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.8 8.6c0 5-8.8 9.8-8.8 9.8S3.2 13.6 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"></path></svg>
+  </a>
+
+</body>
+</html>
