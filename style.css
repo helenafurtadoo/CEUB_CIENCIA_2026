@@ -1,0 +1,196 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background-color: #eee;
+            color: #444242;
+            min-height: 100vh;
+        }
+
+        h1 {
+            background-color: #68438a;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #444242;
+            margin: 40px 0 30px;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        form {
+            width: 90%;
+            max-width: 960px;
+            margin: 0 auto 60px auto;
+            background-color: rgba(238, 230, 250, 0.753);
+            padding: 50px 60px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px #444242;
+        }
+
+        fieldset {
+            border: 2px solid #68438a;
+            border-radius: 8px;
+            padding: 30px 35px;
+            margin-bottom: 35px;
+
+        }
+
+        legend {
+            background-color: #68438a;
+            color: #fff;
+            padding: 7px 18px;
+            border-radius: 5px;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        .campo-grupo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 40px;
+            margin-bottom: 20px;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+        }
+
+        .campo-grupo-tres {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px 40px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444242;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        input[type='text'] {
+            padding: 10px 14px;
+            border: 1px solid;
+            border-radius: 5px;
+            font-size: 15px;
+            background-color: #fff;
+            transition: border-color0.3s, box-shadow 0.3s;
+        }
+
+        .campo input[type='text'],
+        .campo input[type='date'],
+        .campo input[type='email'] {
+            width: 100%;
+        }
+
+        input[type='text']:focus,
+        input[type='date']:focus,
+        input[type='email']:focus {
+            border-color: #444242;
+            box-shadow: 0 0 0 3px;
+            outline: none;
+            background-color: #444242;
+        }
+
+        select {
+            padding: 10px 14px;
+            border: 1px solid #acc;
+            border-radius: 5px;
+            font-size: 15px;
+            background-color: #fff;
+            cursor: pointer;
+            width: 100%;
+            transition: border-color 0.3s;
+        }
+
+        select:focus {
+            border-color: #444242;
+            outline: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        td {
+            padding: 15px 20px;
+            vertical-align: top;
+            border-right: 1px solid #fff;
+            width: 33.33%;
+        }
+
+        td:last-child {
+            border-right: none;
+        }
+
+        td>b,
+        td>strong {
+            display: box;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #444242;
+            margin-bottom: 12px;
+
+        }
+
+        input[type='radio'],
+        input[type='checkbox'] {
+            margin-right: 8px;
+            cursor: pointer;
+            accent-color: #444242;
+            width: 15px;
+            height: 15px;
+        }
+
+        td label {
+            text-transform: none;
+            letter-spacing: 0;
+            font-weight: normal;
+            font-size: 15px;
+            display: inline;
+            margin-bottom: auto;
+        }
+
+        .botoes input[type='submit'] {
+            background-color: rgb(114, 25, 155);
+            color: rgb(255, 255, 255);
+            border-color: white;
+            border-radius: 2px;
+            font-size: 16px;       /* Tamanho do texto */
+            padding: 12px 24px;    
+            width: 200px;          
+            height: 48px;   
+        }
+
+        .botoes input[type='reset'] {
+            background-color: rgb(240, 181, 248);
+            color: rgb(255, 255, 255);
+            border-color: white;
+            border-radius: 2px;
+            font-size: 16px;       
+            padding: 12px 24px;   
+            width: 200px;          
+            height: 48px;   
+        }
