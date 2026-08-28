@@ -91,7 +91,7 @@
         <div class="campo-grupo-tres">
             <div class="campo">
                 <label for="cidade">CIDADE</label>
-                <input type="text" id="cidade" name="cidade" placeholder="Ato Bloco...">
+                <input type="text" id="cidade" name="cidade">
             </div>
             <div class="campo">
                 <label for="estado">ESTADO</label>
@@ -119,9 +119,22 @@
                             <option value="3ano">3º ano</option>
                             <option value="4ano">4º ano</option>
                             <option value="5ano">5º ano</option>
+        
+                            <div class="campo-grupo">
+                                <strong class="segunda-lingua">SEGUNDA LINGUA</strong>
+                                <div class="campo">
+                                    <input type="radio" name="ingles" id="ingles" value="ingles">
+                                    <label for="ingles">Inglês</label><br>
+                                    <input type="radio" name="espanhol" id="espanhol" value="espanhol">
+                                    <label for="espanhol">Espanhol</label><br>
+                                </div>
+                             
+                      
+                            </div>
                         </select>
+        
                     </td>
-
+                
                     <td>
                         <strong>Turno</strong>
                         <input type="radio" name="turno" id="manha" value="manha">
@@ -162,5 +175,24 @@
     </form>
 
 </body>
+<script>
+    const campoCep = document.getElementById('CEP');
+    campoCep.addEventListener('input', function(){
+        let valor = this.value.replace(/\D/g, ``); //--> EXPRESSAO REGULAR (REGEX) se digitar qualquer tipo de letra, vai trocar por aspas vazias ---> encontrar caracteres que você quer remover.
+        if(valor.length > 5 ) {
+            valor = valor.slice(0, 5) + "-" + valor.slice(5,8); // slice = conta a quantidade de caracteres
+        }
+        this.value = valor;
+    })
+    const campoCpf = document.getElementById('CPF');
+    campoCpf.addEventListener('input', function(){
+        let valor = this.value.replace(/\D/g, ``); //--> EXPRESSAO REGULAR (REGEX) se digitar qualquer tipo de letra, vai trocar por aspas vazias ---> encontrar caracteres que você quer remover.
+        if(valor.length > 3 ) {
+            valor = valor.slice(0, 3) + "." + valor.slice(3,6) + "." + valor.slice(6,9) + "." + valor.slice(9,11); // slice = conta a quantidade de caracteres
+        }
+        this.value = valor;
+    })
 
+    const lingua = document.getElementById()
+</script>
 </html>

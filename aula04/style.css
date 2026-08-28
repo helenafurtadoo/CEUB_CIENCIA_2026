@@ -108,7 +108,7 @@
             border-color: #444242;
             box-shadow: 0 0 0 3px;
             outline: none;
-            background-color: #444242;
+            background-color: rgb(250, 250, 250)
         }
 
         select {
@@ -150,7 +150,7 @@
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: #444242;
+            color: #ffc2c2;
             margin-bottom: 12px;
 
         }
@@ -194,3 +194,5 @@
             width: 200px;          
             height: 48px;   
         }
+
+
