@@ -49,11 +49,11 @@
                     <input type="text" id="telefone" name="telefone" maxlength="15" placeholder="(61) 9 9999-9999">
                 </div>
             </div>
-            
+
             <div class="campo-grupo">
                 <div class="campo">
                     <label for="CPF">CPF</label>
-                    <input type="text" id="CPF" name="CPF" maxlength="15" placeholder="000.000.000.00"> 
+                    <input type="text" id="CPF" name="CPF" maxlength="15" placeholder="000.000.000.00">
                 </div>
                 <div class="campo">
                     <label for="CEP">CEP</label>
@@ -61,50 +61,60 @@
                 </div>
             </div>
 
+            <div class="campo-grupo">
+                <div class="campo">
+                    <label for="matricula">MATRÍCULA</label>
+                    <input type="number" id="matricula" name="matricula" maxlength="15" placeholder="000.000.000.00">
+                </div>
+                <div class="campo">
+                    <label for="idade">IDADE</label>
+                    <input type="text" id="idade" name="idade" maxlength="15" placeholder="45 anos" readonly>
+                </div>
+            </div>
         </fieldset>
 
         <fieldset>
             <legend><strong>Endereço</strong></legend>
 
-        <div class="campo-grupo">
-            <div class="campo">
-                <label for="nome_aluno">LOCADOURO</label>
-                <input type="text" id="locadouro" name="locadouro" required>
+            <div class="campo-grupo">
+                <div class="campo">
+                    <label for="nome_aluno">LOCADOURO</label>
+                    <input type="text" id="locadouro" name="locadouro" required>
+                </div>
+                <div class="campo">
+                    <label for="email">NÚMERO</label>
+                    <input type="text" id="numero" name="numero" placeholder="Ex: 123">
+                </div>
             </div>
-            <div class="campo">
-                <label for="email">NÚMERO</label>
-                <input type="text" id="numero" name="numero" placeholder="Ex: 123">
-            </div>
-        </div>
-        
-        <div class="campo-grupo">
-            <div class="campo">
-                <label for="nome_aluno">COMPLEMENTO</label>
-                <input type="text" id="complemento" name="complemento" placeholder="Ato Bloco...">
-            </div>
-            <div class="campo">
-                <label for="email">BAIRRO</label>
-                <input type="text" id="bairro" name="bairro">
-            </div>
-        </div>
 
-        <div class="campo-grupo-tres">
-            <div class="campo">
-                <label for="cidade">CIDADE</label>
-                <input type="text" id="cidade" name="cidade">
+            <div class="campo-grupo">
+                <div class="campo">
+                    <label for="nome_aluno">COMPLEMENTO</label>
+                    <input type="text" id="complemento" name="complemento" placeholder="Ato Bloco...">
+                </div>
+                <div class="campo">
+                    <label for="email">BAIRRO</label>
+                    <input type="text" id="bairro" name="bairro">
+                </div>
             </div>
-            <div class="campo">
-                <label for="estado">ESTADO</label>
-                <input type="text" id="estado" name="estado">
+
+            <div class="campo-grupo-tres">
+                <div class="campo">
+                    <label for="cidade">CIDADE</label>
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+                <div class="campo">
+                    <label for="estado">ESTADO</label>
+                    <input type="text" id="estado" name="estado">
+                </div>
+                <div class="campo">
+                    <label for="email">CÓDIGO IBGE</label>
+                    <input type="text" id="codigoIBGE" name="codioIBGE">
+                </div>
             </div>
-            <div class="campo">
-                <label for="email">CÓDIGO IBGE</label>
-                <input type="text" id="codigoIBGE" name="codioIBGE">
-            </div>
-        </div>
 
         </fieldset>
-        
+
         <fieldset>
             <legend><strong>Informações de Matrícula</strong></legend>
 
@@ -119,7 +129,7 @@
                             <option value="3ano">3º ano</option>
                             <option value="4ano">4º ano</option>
                             <option value="5ano">5º ano</option>
-        
+
                             <div class="campo-grupo">
                                 <strong class="segunda-lingua">SEGUNDA LINGUA</strong>
                                 <div class="campo">
@@ -128,13 +138,13 @@
                                     <input type="radio" name="espanhol" id="espanhol" value="espanhol">
                                     <label for="espanhol">Espanhol</label><br>
                                 </div>
-                             
-                      
+
+
                             </div>
                         </select>
-        
+
                     </td>
-                
+
                     <td>
                         <strong>Turno</strong>
                         <input type="radio" name="turno" id="manha" value="manha">
@@ -177,22 +187,47 @@
 </body>
 <script>
     const campoCep = document.getElementById('CEP');
-    campoCep.addEventListener('input', function(){
+    campoCep.addEventListener('input', function () {
         let valor = this.value.replace(/\D/g, ``); //--> EXPRESSAO REGULAR (REGEX) se digitar qualquer tipo de letra, vai trocar por aspas vazias ---> encontrar caracteres que você quer remover.
-        if(valor.length > 5 ) {
-            valor = valor.slice(0, 5) + "-" + valor.slice(5,8); // slice = conta a quantidade de caracteres
+        if (valor.length > 5) {
+            valor = valor.slice(0, 5) + "-" + valor.slice(5, 8); // slice = conta a quantidade de caracteres
         }
         this.value = valor;
     })
     const campoCpf = document.getElementById('CPF');
-    campoCpf.addEventListener('input', function(){
+    campoCpf.addEventListener('input', function () {
         let valor = this.value.replace(/\D/g, ``); //--> EXPRESSAO REGULAR (REGEX) se digitar qualquer tipo de letra, vai trocar por aspas vazias ---> encontrar caracteres que você quer remover.
-        if(valor.length > 3 ) {
-            valor = valor.slice(0, 3) + "." + valor.slice(3,6) + "." + valor.slice(6,9) + "." + valor.slice(9,11); // slice = conta a quantidade de caracteres
+        if (valor.length > 3) {
+            valor = valor.slice(0, 3) + "." + valor.slice(3, 6) + "." + valor.slice(6, 9) + "." + valor.slice(9, 11); // slice = conta a quantidade de caracteres
         }
         this.value = valor;
     })
 
     const lingua = document.getElementById()
+
+    // Cálculo da idade
+    const idade = document.getElementById('idade');
+    const nascimento = document.getElementById('nascimento');
+
+    nascimento.addEventListener('input', function () {
+
+        const dataNascimento = new Date(this.value);
+        const hoje = new Date();
+
+        let anos = hoje.getFullYear() - dataNascimento.getFullYear();
+
+        if (
+            hoje.getMonth < dataNascimento.getMonth ||
+            (
+                hoje.getMonth === dataNascimento.getMonth() &&
+                hoje.getDate < dataNascimento.getDate()
+            )
+        ) {
+            anos--;
+        }
+
+        idade.value = anos + 'anos';
+    });
 </script>
+
 </html>
