@@ -68,7 +68,7 @@
                 </div>
                 <div class="campo">
                     <label for="idade">IDADE</label>
-                    <input type="text" id="idade" name="idade" maxlength="15" placeholder="45 anos" readonly>
+                    <input type="text" id="idade" name="idade" maxlength="15" readonly>
                 </div>
             </div>
         </fieldset>
@@ -193,7 +193,7 @@
             valor = valor.slice(0, 5) + "-" + valor.slice(5, 8); // slice = conta a quantidade de caracteres
         }
         this.value = valor;
-    })
+    });
     const campoCpf = document.getElementById('CPF');
     campoCpf.addEventListener('input', function () {
         let valor = this.value.replace(/\D/g, ``); //--> EXPRESSAO REGULAR (REGEX) se digitar qualquer tipo de letra, vai trocar por aspas vazias ---> encontrar caracteres que você quer remover.
@@ -201,33 +201,18 @@
             valor = valor.slice(0, 3) + "." + valor.slice(3, 6) + "." + valor.slice(6, 9) + "." + valor.slice(9, 11); // slice = conta a quantidade de caracteres
         }
         this.value = valor;
-    })
-
-    const lingua = document.getElementById()
+    });
 
     // Cálculo da idade
-    const idade = document.getElementById('idade');
-    const nascimento = document.getElementById('nascimento');
-
-    nascimento.addEventListener('input', function () {
-
-        const dataNascimento = new Date(this.value);
+    document.getElementById('nascimento').addEventListener('change', function () { 
+        const nascimento = new Date(this.value);
         const hoje = new Date();
 
-        let anos = hoje.getFullYear() - dataNascimento.getFullYear();
+        let anos = hoje.getFullYear - nascimento.getFullYear;
 
-        if (
-            hoje.getMonth < dataNascimento.getMonth ||
-            (
-                hoje.getMonth === dataNascimento.getMonth() &&
-                hoje.getDate < dataNascimento.getDate()
-            )
-        ) {
-            anos--;
-        }
+        document.getElementById('idade').value(anos + 'Anos');
+    })
 
-        idade.value = anos + 'anos';
-    });
 </script>
 
 </html>
