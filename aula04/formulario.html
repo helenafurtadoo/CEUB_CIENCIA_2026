@@ -78,8 +78,8 @@
 
             <div class="campo-grupo">
                 <div class="campo">
-                    <label for="nome_aluno">LOCADOURO</label>
-                    <input type="text" id="locadouro" name="locadouro" required>
+                    <label for="nome_aluno">LOGRADOURO</label>
+                    <input type="text" id="logradouro" name="logradouro" required>
                 </div>
                 <div class="campo">
                     <label for="email">NÚMERO</label>
@@ -211,6 +211,32 @@
         let anos = hoje.getFullYear - nascimento.getFullYear;
 
         document.getElementById('idade').value(anos + 'Anos');
+    })
+
+    campoCep.addEventListener('blur',function() {
+        const cepLimpo = this.value.replace(/\D/g, '');
+        if(cepLimpo.length !== 8){
+            alert('cep digitado errado');
+            return;
+        }
+
+        fetch(`https://viacep.com.br/ws${cepLimpo}/json`)
+        .then(r => {
+            if (!r.ok) throw new Error('erro na rede dos correios')
+            return r.json();
+        })
+        //se o cep existe ou nao:
+        .then(dados => {
+            if(dados.erro){
+                alert('cep nao encontrado');
+                return;
+            }
+            document.getElementById('logradouro').value = dados.logradouro || '';
+            document.getElementById('bairro').value = dados.bairro || '';
+            document.getElementById('cidade').value = dados.cidade || '';   
+            document.getElementById('estado').value = dados.uf || '';
+            document.getElementById('ibge').value = dados.ibge || '';
+        })
     })
 
 </script>
