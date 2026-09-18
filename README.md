@@ -1,14 +1,8 @@
 # Ciência da Computação —  Desenvolvimento Web 2026
 
-## Repositório criado para organizar exercícios, códigos e atividades desenvolvidos durante a disciplina desenvolvimento web em 2026.
+Repositório criado para organizar exercícios, códigos e atividades desenvolvidos durante a disciplina desenvolvimento web em 2026.
 
 O objetivo é manter os conteúdos acadêmicos organizados por aula e acompanhar minha evolução ao longo do semestre.
-
-Organização
-CEUB_CIENCIA_2026/
-│
-├── aula01/
-└── aula02/
 
 Novas aulas e atividades serão adicionadas ao repositório conforme o avanço das disciplinas.
 
