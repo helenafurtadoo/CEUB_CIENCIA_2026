@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Formulário de adoção de pets e controle demonstrativo de adoções.">
+    <title>Formulário de adoção | Adote um Amigo</title>
+    <link href="startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&amp;display=swap" rel="stylesheet">
+    <link href="startbootstrap-sb-admin-2/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/tema-ceub.css" rel="stylesheet">
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <!-- Menu lateral do modelo SB Admin 2 -->
+        <nav class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" aria-label="Menu principal">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-paw" aria-hidden="true"></i></div>
+                <div class="sidebar-brand-text mx-3">Adote um Amigo</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" aria-current="page">
+                        <i class="fas fa-fw fa-heart" aria-hidden="true"></i>
+                        <span>Formulário de adoção</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="controle-adocoes.html" >
+                        <i class="fas fa-fw fa-table" aria-hidden="true"></i>
+                        <span>Controle de adoções</span>
+                    </a>
+                </li>
+            </ul>
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle" type="button" aria-label="Alternar tamanho do menu lateral"></button>
+            </div>
+            <div class="sidebar-card d-none d-lg-flex">
+                <i class="fas fa-paw fa-3x mb-3 text-white-50" aria-hidden="true"></i>
+                <p class="text-center mb-0">Um novo lar.<br><strong>Uma nova história.</strong></p>
+            </div>
+        </nav>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <header class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3" type="button" aria-label="Alternar menu lateral">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <span class="font-weight-bold text-primary">Adoção responsável</span>
+                    <div class="ml-auto d-flex align-items-center">
+                        <span class="mr-3 d-none d-sm-inline text-gray-600 small">Projeto demonstrativo</span>
+                        <div class="icon-circle bg-primary"><i class="fas fa-paw text-white" aria-hidden="true"></i></div>
+                    </div>
+                </header>
+                <main class="container-fluid" id="conteudo">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-3 mb-sm-0 text-gray-800">Formulário de adoção de pets</h1>
+                        <a href="controle-adocoes.html" class="btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-table fa-sm mr-1" aria-hidden="true"></i> Controle de adoções
+                        </a>
+                    </div>
+                    <p class="mb-4">Conte um pouco sobre você e o lar que deseja oferecer ao seu novo amigo.</p>
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-8">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h2 class="h6 m-0 font-weight-bold text-primary">Solicitação de adoção</h2>
+                                </div>
+                                <div class="card-body">
+                                    <p class="small">Os campos com * são obrigatórios. Este formulário é uma demonstração: os dados não são enviados nem armazenados.</p>
+                                    <noscript><div class="alert alert-warning">Ative o JavaScript para simular o envio do formulário.</div></noscript>
+                                    <div id="mensagem-envio" class="alert alert-success d-none" role="status" tabindex="-1">
+                                        Formulário validado! A solicitação foi apenas simulada; nenhum dado foi enviado ou salvo.
+                                    </div>
+                                    <form id="form-adocao">
+                                        <fieldset>
+                                            <legend class="h5 text-gray-800 mb-3">Dados do adotante</legend>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-8">
+                                                    <label for="nome">Nome completo *</label>
+                                                    <input class="form-control" id="nome" name="nome" type="text" autocomplete="name" maxlength="120" required>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="idade">Idade *</label>
+                                                    <input class="form-control" id="idade" name="idade" type="number" min="18" max="120" aria-describedby="idade-ajuda" required>
+                                                    <small id="idade-ajuda" class="form-text text-muted">A partir de 18 anos.</small>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="email">E-mail *</label>
+                                                    <input class="form-control" id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="telefone">Telefone *</label>
+                                                    <input class="form-control" id="telefone" name="telefone" type="tel" autocomplete="tel" placeholder="(61) 99999-9999" maxlength="25" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-8">
+                                                    <label for="cidade">Cidade *</label>
+                                                    <input class="form-control" id="cidade" name="cidade" type="text" autocomplete="address-level2" required>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="uf">Estado *</label>
+                                                    <select class="form-control" id="uf" name="uf" autocomplete="address-level1" required>
+                                                        <option value="">Selecione</option>
+                                                        <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+                                                        <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+                                                        <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+                                                        <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+                                                        <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                                                        <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+                                                        <option>SP</option><option>SE</option><option>TO</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <hr>
+                                        <fieldset>
+                                            <legend class="h5 text-gray-800 mb-3">Sobre o pet e o novo lar</legend>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="pet">Pet que deseja adotar *</label>
+                                                    <select class="form-control" id="pet" name="pet" required>
+                                                        <option value="">Selecione um amigo</option>
+                                                        <option value="luna">Luna — gata, 1 ano</option>
+                                                        <option value="thor">Thor — cachorro, 2 anos</option>
+                                                        <option value="mel">Mel — cadela, 3 anos</option>
+                                                        <option value="simba">Simba — gato, 6 meses</option>
+                                                        <option value="ainda-nao-sei">Ainda não escolhi</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="moradia">Tipo de moradia *</label>
+                                                    <select class="form-control" id="moradia" name="moradia" required>
+                                                        <option value="">Selecione</option>
+                                                        <option>Casa com quintal</option>
+                                                        <option>Casa sem quintal</option>
+                                                        <option>Apartamento</option>
+                                                        <option>Outro</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="outros-pets">Já possui outros animais? *</label>
+                                                    <select class="form-control" id="outros-pets" name="outros-pets" required>
+                                                        <option value="">Selecione</option>
+                                                        <option>Sim</option>
+                                                        <option>Não</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="seguranca">O lar possui telas ou cercas? *</label>
+                                                    <select class="form-control" id="seguranca" name="seguranca" required>
+                                                        <option value="">Selecione</option>
+                                                        <option>Sim</option>
+                                                        <option>Não</option>
+                                                        <option>Vou adaptar antes da adoção</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="motivacao">Por que deseja adotar? *</label>
+                                                <textarea class="form-control" id="motivacao" name="motivacao" rows="4" maxlength="1500" placeholder="Fale sobre sua rotina e como pretende cuidar do pet." required></textarea>
+                                            </div>
+                                        </fieldset>
+                                        <div class="custom-control custom-checkbox mb-4">
+                                            <input class="custom-control-input" type="checkbox" id="responsabilidade" name="responsabilidade" required>
+                                            <label class="custom-control-label" for="responsabilidade">Estou ciente de que a adoção exige cuidados, alimentação, acompanhamento veterinário e carinho durante toda a vida do pet. *</label>
+                                        </div>
+                                        <button class="btn btn-primary mb-2 mr-2" type="submit" id="enviar" disabled>
+                                            <i class="fas fa-heart mr-1" aria-hidden="true"></i> Simular solicitação
+                                        </button>
+                                        <button class="btn btn-outline-secondary mb-2" type="reset">Limpar formulário</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="col-xl-4 col-lg-4" aria-label="Orientações para adoção">
+                            <div class="card border-left-primary shadow mb-4">
+                                <div class="card-body">
+                                    <i class="fas fa-paw fa-3x text-primary mb-3" aria-hidden="true"></i>
+                                    <h2 class="h5 font-weight-bold text-gray-800">Adotar é um compromisso</h2>
+                                    <p class="mb-0">Cada pet tem seu jeito e seu tempo de adaptação. Prepare um ambiente seguro e acolhedor para receber seu novo companheiro.</p>
+                                </div>
+                            </div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3"><h2 class="h6 m-0 font-weight-bold text-primary">Como funciona?</h2></div>
+                                <div class="card-body">
+                                    <ol class="pl-3 mb-0">
+                                        <li class="mb-3">Preencha seus dados e escolha um pet.</li>
+                                        <li class="mb-3">Em uma adoção real, a equipe conversa com você para conhecer sua rotina.</li>
+                                        <li>Após a aprovação, é hora de conhecer seu novo amigo e preparar a chegada!</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="card border-left-info shadow mb-4">
+                                <div class="card-body">
+                                    <h2 class="h6 font-weight-bold text-gray-800">Acompanhe os exemplos</h2>
+                                    <p>Veja uma tabela fictícia com solicitações em diferentes etapas.</p>
+                                    <a href="controle-adocoes.html">Ver controle de adoções <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </main>
+            </div>
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Adote um Amigo &copy; 2026 · Projeto acadêmico</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <a class="scroll-to-top rounded" href="#page-top" aria-label="Voltar ao topo">
+        <i class="fas fa-angle-up" aria-hidden="true"></i>
+    </a>
+    <script src="startbootstrap-sb-admin-2/vendor/jquery/jquery.min.js"></script>
+    <script src="startbootstrap-sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="startbootstrap-sb-admin-2/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="startbootstrap-sb-admin-2/js/sb-admin-2.min.js"></script>
+    <script>
+        const formulario = document.getElementById('form-adocao');
+        const mensagem = document.getElementById('mensagem-envio');
+
+        formulario.addEventListener('submit', function (event) {
+            event.preventDefault();
+            mensagem.classList.remove('d-none');
+            mensagem.focus();
+        });
+
+        formulario.addEventListener('reset', function () {
+            mensagem.classList.add('d-none');
+        });
+
+        formulario.addEventListener('input', function () {
+            mensagem.classList.add('d-none');
+        });
+
+        document.getElementById('enviar').disabled = false;
+    </script>
+</body>
+</html>

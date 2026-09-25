@@ -1,0 +1,113 @@
+/* Paleta oficial: https://institucional.uniceub.br/central-da-marca */
+:root {
+    --ceub-roxo: #662c92;
+    --ceub-roxo-escuro: #43054e;
+    --ceub-fundo: #f8f5fb;
+    --ceub-suave: #eee5f5;
+    --ceub-foco: rgba(102, 44, 146, 0.25);
+    --primary: var(--ceub-roxo);
+    --info: var(--ceub-roxo);
+}
+
+#content-wrapper {
+    background-color: var(--ceub-fundo);
+}
+
+.bg-gradient-primary {
+    background-color: var(--ceub-roxo);
+    background-image: linear-gradient(180deg, var(--ceub-roxo) 10%, var(--ceub-roxo-escuro) 100%);
+}
+
+.bg-primary {
+    background-color: var(--ceub-roxo) !important;
+}
+
+.text-primary,
+.text-info {
+    color: var(--ceub-roxo) !important;
+}
+
+.border-left-primary,
+.border-left-info {
+    border-left-color: var(--ceub-roxo) !important;
+}
+
+a,
+.btn-link {
+    color: var(--ceub-roxo);
+}
+
+a:hover,
+.btn-link:hover {
+    color: var(--ceub-roxo-escuro);
+}
+
+.btn-primary,
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: #fff;
+    background-color: var(--ceub-roxo);
+    border-color: var(--ceub-roxo);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active {
+    background-color: var(--ceub-roxo-escuro);
+    border-color: var(--ceub-roxo-escuro);
+}
+
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem var(--ceub-foco);
+}
+
+.form-control:focus {
+    border-color: var(--ceub-roxo);
+    box-shadow: 0 0 0 0.2rem var(--ceub-foco);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: var(--ceub-roxo);
+    border-color: var(--ceub-roxo);
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem var(--ceub-foco);
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: var(--ceub-roxo);
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: var(--ceub-suave);
+    border-color: var(--ceub-roxo);
+}
+
+.card-header,
+.table .thead-light th {
+    color: var(--ceub-roxo-escuro);
+    background-color: var(--ceub-suave);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--ceub-fundo);
+}
+
+.badge-info,
+.scroll-to-top {
+    background-color: var(--ceub-roxo);
+}
+
+.scroll-to-top:hover {
+    background-color: var(--ceub-roxo-escuro);
+}
+
+.topbar #sidebarToggleTop:hover,
+.topbar #sidebarToggleTop:active {
+    background-color: var(--ceub-suave);
+}
